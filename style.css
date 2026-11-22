@@ -613,3 +613,71 @@ a {
         height: 290px;
     }
 }
+/* ================= REAL PRODUCT CATALOG ================= */
+section[id], article[id] { scroll-margin-top: 100px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #8b6913; outline-offset: 5px; }
+.hero-products { position: relative; width: 100%; height: 100%; z-index: 2; mix-blend-mode: multiply; }
+.hero-products img { position: absolute; object-fit: contain; mix-blend-mode: multiply; }
+.hero-treatment { width: 76%; height: 80%; left: 0; bottom: 3%; }
+.hero-serum { width: 40%; height: 88%; right: 0; bottom: 9%; }
+.about-product-photo { width: 80%; padding: 26px 28px; background: #fbf9f0; border: 1px solid #eee6cf; border-radius: 25px; text-align: center; }
+.about-product-photo img { display: block; width: 100%; height: 355px; object-fit: contain; mix-blend-mode: multiply; }
+.about-product-photo span { display: block; margin-top: 18px; font-family: "Playfair Display", serif; font-size: 24px; }
+.products-grid { align-items: start; }
+.product-card:hover { transform: none; }
+.product-image { height: 355px; padding: 25px; background: #fcfbf7; border-bottom: 1px solid #eee6cf; }
+.product-image img { display: block; max-width: 100%; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.product-info { padding: 32px; }
+.product-category { display: block; margin-bottom: 12px; color: #806214; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.4px; }
+.product-info h3 { font-size: clamp(26px, 2.5vw, 32px); line-height: 1.25; min-height: 2.5em; overflow-wrap: anywhere; }
+.product-info .product-size { color: #526256; font-size: 0.875rem; margin: 16px 0 22px; }
+.product-info > p:not(.product-size) { min-height: 8em; }
+.product-highlights { padding-left: 20px; margin: 0 0 28px; color: #344c3d; min-height: 8em; }
+.product-highlights li { margin: 8px 0; padding-left: 3px; }
+.product-highlights li::marker { color: #9a761b; }
+.product-details { margin-bottom: 26px; border-top: 1px solid #e3e7df; }
+.product-details details { border-bottom: 1px solid #e3e7df; }
+.product-details summary { cursor: pointer; padding: 17px 2px; font-weight: 600; font-size: 0.9375rem; }
+.product-details summary::marker { color: #8b6913; }
+.product-details summary:hover { color: #806214; }
+.product-details details[open] summary { margin-bottom: 4px; }
+.product-details ol { padding-left: 24px; margin: 0 0 20px; color: #555; }
+.product-details li { padding-left: 4px; margin-bottom: 10px; }
+.product-details p { font-size: 1rem; margin: 0 0 18px; }
+.product-details .detail-note { font-size: 0.875rem; }
+.product-details dl { margin-bottom: 20px; }
+.product-details dt { font-size: 0.875rem; color: #526256; margin-top: 12px; }
+.product-details dd { font-size: 1rem; overflow-wrap: anywhere; }
+.product-contact { display: block; background: #173d2c; color: #fff; text-align: center; }
+.product-contact:hover { background: #285b42; }
+.products-help { text-align: center; margin: 34px auto 0; color: #555; }
+.products-help a { color: #173d2c; text-decoration: underline; text-underline-offset: 4px; font-weight: 600; }
+@media (max-width: 900px) {
+    .hero-products { max-width: 510px; }
+    .product-info h3, .product-info > p:not(.product-size), .product-highlights { min-height: 0; }
+    .products-grid { max-width: 640px; margin-inline: auto; }
+    .menu { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .menu a { padding: 8px 0; }
+    .nav { gap: 12px; }
+}
+@media (max-width: 600px) {
+    .nav { flex-direction: column; padding-block: 12px; gap: 8px; }
+    .menu { gap: 6px 16px; }
+    .menu a { font-size: 0.875rem; }
+    section[id], article[id] { scroll-margin-top: 160px; }
+    .hero { padding: 55px 0; }
+    .hero-content { gap: 25px; }
+    .hero-image { height: 320px; }
+    .about { gap: 32px; }
+    .about-image { min-height: 0; }
+    .about-product-photo { width: 100%; }
+    .about-product-photo img { height: 290px; }
+    .product-image { height: 290px; padding: 20px; }
+    .product-info { padding: 24px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+}
+
+.hero-image .gold-circle { width: 100%; height: 100%; background: radial-gradient(circle, #d7bc60, transparent 70%); opacity: 0.2; }
